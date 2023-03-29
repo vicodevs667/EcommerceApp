@@ -7,4 +7,7 @@ package com.victor.ecommerceapp.presentation.navigation.screen
  * More info: www.victorsanjines.com.bo
  * All rights reserved 2023
  ****/
-sealed class AuthScreen
+sealed class AuthScreen(val route: String) {
+    object Login: AuthScreen("login")
+    object Register: AuthScreen("register")
+}

@@ -2,6 +2,11 @@ package com.victor.ecommerceapp.presentation.screens.auth
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.victor.ecommerceapp.presentation.screens.auth.login.components.LoginContent
+import com.victor.ecommerceapp.presentation.ui.theme.EcommerceAppTheme
 
 /****
  * Project: Ecommerce App
@@ -12,9 +17,17 @@ import androidx.compose.runtime.Composable
  ****/
 
 @Composable
-fun LoginScreen() {
-    //ubicar los componentes de mejor manera
-    Scaffold() {
+fun LoginScreen(navController: NavHostController) {
+    //ubicar los componentes en la pantalla de mejor manera
+    Scaffold() { paddingValues ->
+        LoginContent(paddingValues, navController= navController)
+    }
+}
 
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun LoginScreenPreview() {
+    EcommerceAppTheme {
+        LoginScreen(rememberNavController())
     }
 }

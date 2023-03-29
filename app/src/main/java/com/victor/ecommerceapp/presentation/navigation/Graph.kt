@@ -8,4 +8,6 @@ package com.victor.ecommerceapp.presentation.navigation
  * All rights reserved 2023
  ****/
 object Graph {
+    const val ROOT = "root_graph"
+    const val AUTH = "auth_graph"
 }
